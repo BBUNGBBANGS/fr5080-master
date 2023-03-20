@@ -1,0 +1,38 @@
+
+ROM 0x01003000  0x10000
+{
+	ER_ENTRY 0x01003000 FIXED
+	{
+		*(entry_code)
+	}
+	ER_RO +0
+	{
+		*(+RO)
+	}
+	ER_BOOT	0x20000000
+	{
+		app_boot_vectors.o (RESET,+FIRST)
+	}
+	;rom data end addr 0x200047d8
+	ER_RE_RAM 0x20005000
+	{
+	    *(ram_code)			
+	}
+	ER_RW +0
+    {
+        *(+RW)
+    }
+	ER_ZI +0 ALIGN(4)
+	{
+	    *(+ZI)			
+	}
+	TIME_SEC 0x20004FE0
+	{
+		*(compile_time_sec)
+	}
+  
+	DATE_SEC 0x20004FF0
+	{
+		*(compile_date_sec)
+	}
+}

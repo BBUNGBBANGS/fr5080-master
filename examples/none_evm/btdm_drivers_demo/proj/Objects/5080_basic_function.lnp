@@ -1,0 +1,26 @@
+--cpu Cortex-M3
+".\objects\proj_main.o"
+".\objects\app_at.o"
+".\objects\user_task.o"
+".\objects\user_bt.o"
+".\objects\test_drivers.o"
+"..\..\..\..\components\btdm\library\5080_host.lib"
+".\objects\app_boot_vectors.o"
+".\objects\hardfault.o"
+".\objects\driver_uart.o"
+".\objects\driver_pmu.o"
+".\objects\driver_gpio.o"
+".\objects\driver_i2c.o"
+".\objects\driver_i2s.o"
+".\objects\driver_timer.o"
+".\objects\driver_pdm.o"
+".\objects\driver_adc.o"
+".\objects\driver_rtc.o"
+".\objects\driver_syscntl.o"
+".\objects\driver_ipc.o"
+".\objects\driver_pwm.o"
+".\objects\driver_wdt.o"
+--strict --scatter ".\5080_btdm.sct"
+../../../../components/btdm/library/syscall.txt --entry=app_entry --datacompressor=off --no-shortveneer --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\5080_basic_function.map" -o .\Objects\5080_basic_function.axf

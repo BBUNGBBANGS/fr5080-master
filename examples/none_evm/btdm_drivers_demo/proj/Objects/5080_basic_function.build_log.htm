@@ -1,0 +1,103 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: •ÏVision V5.37.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: jisu seo, no, LIC=ATTQ1-CCABI-74YS0-BDPDR-4UUXC-XG4JQ
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.37.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.18
+Assembler:       Armasm.exe V6.18
+Linker/Locator:  ArmLink.exe V6.18
+Library Manager: ArmAr.exe V6.18
+Hex Converter:   FromElf.exe V6.18
+CPU DLL:         SARMCM3.DLL V5.37.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.9.0
+Dialog DLL:      TCM.DLL V1.56.1.0
+ 
+<h2>Project:</h2>
+D:\1.Project_workspace\fr5080-master\examples\none_evm\btdm_drivers_demo\proj\5080_btdm.uvprojx
+Project File Date:  11/08/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.18', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'btdm_demo'
+assembling app_boot_vectors.s...
+compiling proj_main.c...
+compiling user_task.c...
+compiling driver_pwm.c...
+compiling driver_i2s.c...
+compiling driver_timer.c...
+compiling driver_uart.c...
+compiling hardfault.c...
+compiling driver_syscntl.c...
+compiling test_drivers.c...
+compiling driver_adc.c...
+compiling driver_pdm.c...
+compiling driver_gpio.c...
+../../../../components/driver/driver_rtc.c(14): warning: implicit declaration of function 'co_delay_10us' is invalid in C99 [-Wimplicit-function-declaration]
+    co_delay_10us(7);
+    ^
+../../../../components/driver/driver_rtc.c(41): warning: implicitly declaring library function 'printf' with type 'int (const char *, ...)' [-Wimplicit-function-declaration]
+    printf("rtc isr.\r\n");
+    ^
+../../../../components/driver/driver_rtc.c(41): note: include the header <stdio.h> or explicitly provide a declaration for 'printf'
+2 warnings generated.
+compiling driver_rtc.c...
+compiling driver_wdt.c...
+compiling driver_pmu.c...
+compiling user_bt.c...
+compiling driver_i2c.c...
+compiling driver_ipc.c...
+../code/app_at.c(46): warning: format specifies type 'unsigned int' but the argument has type 'uint32_t *' (aka 'unsigned int *') [-Wformat]
+                printf("ptr is 0x%08x, count = %d.\r\n", ptr, count);
+                                 ~~~~                    ^~~
+../code/app_at.c(49): warning: format specifies type 'unsigned int' but the argument has type 'uint32_t *' (aka 'unsigned int *') [-Wformat]
+                        printf("0x%08x: ", start);
+                                  ~~~~     ^~~~~
+../code/app_at.c(127): warning: implicit declaration of function 'bt_disconnect' is invalid in C99 [-Wimplicit-function-declaration]
+            bt_disconnect();
+            ^
+../code/app_at.c(139): warning: implicit declaration of function 'co_ascii_strn2val' is invalid in C99 [-Wimplicit-function-declaration]
+                ool_write(co_ascii_strn2val((const char*)&data[0],16,2),co_ascii_strn2val((const char*)&data[3],16,2));
+                          ^
+../code/app_at.c(143): warning: implicit declaration of function 'co_ascii_strn2val' is invalid in C99 [-Wimplicit-function-declaration]
+                printf("\r\n0x%x\r\n",ool_read(co_ascii_strn2val((const char*)&data[0],16,2)));
+                                               ^
+../code/app_at.c(150): warning: implicit declaration of function 'co_ascii_strn2val' is invalid in C99 [-Wimplicit-function-declaration]
+                printf("\r\n0x%x\r\n",REG_PL_RD(co_ascii_strn2val((const char*)&data[0],16,8)));
+                                                ^
+../code/app_at.c(153): warning: implicit declaration of function 'co_ascii_strn2val' is invalid in C99 [-Wimplicit-function-declaration]
+                REG_PL_WR(co_ascii_strn2val((const char*)&data[0],16,8),co_ascii_strn2val((const char*)&data[9],16,8));
+                          ^
+../code/app_at.c(219): warning: implicit declaration of function 'spp_send_data' is invalid in C99 [-Wimplicit-function-declaration]
+            spp_send_data(data_spp, 10);
+            ^
+8 warnings generated.
+compiling app_at.c...
+linking...
+Program Size: Code=67460 RO-data=1788 RW-data=564 ZI-data=5728  
+After Build - User command #1: fromelf.exe  --text  -c -o Output/5080_basic_function.txt  Objects/5080_basic_function.axf
+After Build - User command #2: fromelf.exe  --bin -o Output/5080_basic_function.bin  Objects/5080_basic_function.axf
+".\Objects\5080_basic_function.axf" - 0 Error(s), 10 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+
+<h2>Collection of Component include folders:</h2>
+  C:/Users/jisu8/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/Device/ARM/ARMCM3/Include
+
+<h2>Collection of Component Files used:</h2>
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
